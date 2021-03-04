@@ -19,32 +19,34 @@
 
 
                     <div class="myLeftCtn">
-                        <form action="" class="myform text-center">
+                        <form action="" class="myform text-center" id="Regform">
                             <header>Create new account</header>
                             <div class="form-group">
                                 <i class="fas fa-user"></i>
                                 <input class="myInput" type="text" placeholder="Username" id="username" required>
-                                <div class="invalid-feedback">Please fill out this field.</div>
+                                <div class="invalid-feedback"><small id="statusMsg1"></small></div>
 
                             </div>
                             <div class="form-group">
                                 <i class="fas fa-envelope"></i>
                                 <input class="myInput" placeholder="Email"type="text"
                                 id="email" required>
-                                <div class="invalid-feedback">Please fill this field.</div>
+                                <div class="invalid-feedback"><small id="statusMsg2"></small></div>
                             </div>
                             <div class="form-group">
                                 <i class="fas fa-phone"></i>
                                 <input class="myInput" placeholder="phn.no"type="tel" id="phone" required>
-                                <div class="invalid-feedback">Please fill this field.</div>
+                                <div class="invalid-feedback"><small id="statusMsg3"></small></div>
                             </div>
                             <div class="form-group">
                                 <i class="fas fa-lock"></i>
                                 <input class="myInput" placeholder="Password" type="password" id="password" required>
-                                <div class="invalid-feedback">Please fill this field.</div> 
+                                <div class="invalid-feedback"><small id="statusMsg4"></small></div> 
                             </div>
-                            <input type="submit" class="butt" value="CREATE ACCOUNT">
+                            <button type="submit" class="butt" onclick="addPpl()" id="signup" >CREATE ACCOUNT</button>
+                            <div><span id="successMsg"></span></div>
                         </form>
+                        <div><span id="successMsg"></span></div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -61,8 +63,9 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/ajaxreqs.js"></script>
 </body>
 </html>
