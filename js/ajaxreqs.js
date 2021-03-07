@@ -11,19 +11,19 @@ $(document).ready(function(){
                     email: email,
                 },
                 success: function (data) {
-                   // console.log(data);
+                 console.log(data);
                    if(data != 0 && reg.test(email)){
-                       $("#statusMsg2").html('<small style="color:red;">email exit</small>');
+                       $("#statusMsg2").html('<small style="color:red;">email</small>');
                    $("#signup").attr("disable", true);
                     } else if(data == 0){
-                        $("#statusMsg2").html('<small style="color:green;">email exit</small>');
+                        $("#statusMsg2").html('<small style="color:green;">email go</small>');
                         $("#signup").attr("disable", false);
                     } else if(!reg.test(email)){
-                        $("#statusMsg2").html('<small style="color:red;"> enter valid email</small>');
+                        $("#statusMsg2").html('<small style="color:red;">valid email</small>');
                         $("#signup").attr("disable", false);
                     }
                     if(email==""){
-                        $("#statusMsg2").html('<small style="color:red;">please enter email</small>');
+                        $("#statusMsg2").html('<small style="color:red;">plse email</small>');
                     }
                 },
             });
@@ -33,6 +33,7 @@ $(document).ready(function(){
 
 
 function addPpl(){
+    var regusr = /^[A-Za-z]+$/;
     var reg= /^[A-Z0-9._%+-]+@([A-Z0-9]+\.)+[A-Z]{2,4}$/i;
     var username =$("#username").val();
     var email =$("#email").val();
@@ -40,27 +41,33 @@ function addPpl(){
     var phone =$("#phone").val();
    //checking form fields
    if(username.trim()==""){
-       $("statusMsg1").html('<small style="color:red;">please enter name</small>');
+       $("#statusMsg1").html('<small style="color:red;">enter name</small>');
        $("#username").focus();
        return false;
-   } 
+   }
+    else if(username.trim() != "" && !regusr.test(username)){
+    $("#statusMsg1").html('<small style="color:red;">valid name</small>');
+    $("#username").focus();
+    return false;
+   
+}
    else if(email.trim()==""){
-    $("statusMsg2").html('<small style="color:red;">please enter email</small>');
+    $("#statusMsg2").html('<small style="color:red;">enter email</small>');
     $("#email").focus();
     return false;
 
    } else if(email.trim() != "" && !reg.test(email)){
-    $("statusMsg1").html('<small style="color:red;">please enter valid email</small>');
-    $("#username").focus();
+    $("#statusMsg2").html('<small style="color:red;">valid email</small>');
+    $("#email").focus();
     return false;
    
 } else if(phone.trim()==""){
-    $("statusMsg3").html('<small style="color:red;">please enter phone no</small>');
-    $("#password").focus();
+    $("#statusMsg3").html('<small style="color:red;">phone no</small>');
+    $("#phone").focus();
     return false;
   
 } else if(password.trim()==""){
-    $("statusMsg4").html('<small style="color:red;">please enter password</small>');
+    $("#statusMsg4").html('<small style="color:red;">password</small>');
     $("#password").focus();
     return false;
   
@@ -79,7 +86,7 @@ function addPpl(){
             console.log(data);
              
             if(data == "ok"){
-                $('#successMsg').html("<span class='alert alert-success'>regggg</span>");
+                $('#successMsg').html("<span class='alert alert-success'>reg</span>");
 
             } else if(data == "failed"){
                 $('#successMsg').html("<span class='alert alert-danger'>notreg</span>");
@@ -116,13 +123,13 @@ function checklogin(){
         data:{
             checkLogemail:"checklogmail",
             LogEmail:LogEmail,
-            LogPass:LogEmail,
+            LogPass:LogPass,
         },
         success:function(data){
            // console.log(data);
            if(data == 0){
                $("#statusLogMsg").html('<small class="alert alert-danger"> Invalid email id or pass</small>');
-           } else if (data ==1){
+           } else if (data == 1){
             $("#statusLogMsg").html('<div class="spinner-border text-success" role="status"> Invalid email id or pass</div>');
             setTimeout(()=>{
                 window.location.href = "index.php";

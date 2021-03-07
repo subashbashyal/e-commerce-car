@@ -23,30 +23,29 @@
                             <header>Create new account</header>
                             <div class="form-group">
                                 <i class="fas fa-user"></i>
-                                <input class="myInput" type="text" placeholder="Username" id="username" required>
-                                <div class="invalid-feedback"><small id="statusMsg1"></small></div>
-
+                                <input class="myInput" type="text" placeholder="Username" id="username" >
+                                <small id="statusMsg1"></small>
+                            
                             </div>
                             <div class="form-group">
                                 <i class="fas fa-envelope"></i>
                                 <input class="myInput" placeholder="Email"type="text"
-                                id="email" required>
-                                <div class="invalid-feedback"><small id="statusMsg2"></small></div>
+                                id="email" >
+                                <small id="statusMsg2"></small>
                             </div>
                             <div class="form-group">
                                 <i class="fas fa-phone"></i>
-                                <input class="myInput" placeholder="phn.no"type="tel" id="phone" required>
-                                <div class="invalid-feedback"><small id="statusMsg3"></small></div>
+                                <input class="myInput" placeholder="phn.no"type="tel" id="phone">
+                                <small id="statusMsg3"></small>
                             </div>
                             <div class="form-group">
                                 <i class="fas fa-lock"></i>
-                                <input class="myInput" placeholder="Password" type="password" id="password" required>
-                                <div class="invalid-feedback"><small id="statusMsg4"></small></div> 
+                                <input class="myInput" placeholder="Password" type="password" id="password" >
+                                <small id="statusMsg4"></small> 
                             </div>
                             <button type="submit" class="butt" onclick="addPpl()" id="signup" >CREATE ACCOUNT</button>
-                            <div><span id="successMsg"></span></div>
+                            <span id="successMsg"></span>
                         </form>
-                        <div><span id="successMsg"></span></div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -54,7 +53,7 @@
                         <div class="box">
                             <header>YOUR CHOICE AUTO RE-CONDITION</header>
                             <P>We are here to provide service.All brands of car available here.</P>
-                            <img src="images/car.jpg" alt="">
+                            <img src="img/avatar.svg" alt="">
                         </div>
 
                     </div>

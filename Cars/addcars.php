@@ -31,7 +31,7 @@ if(isset($_POST['username']) && isset($_POST['email'])  && isset($_POST['phone']
 if(isset($_POST['checkLogemail']) && isset($_POST['LogEmail']) && isset($_POST['LogPass'])){
     $LogEmail = $_POST['LogEmail'];
     $LogPass = $_POST['LogPass'];
-    $sql ="SELECT p_email, p_pass FROM student WHERE p_email ='".$LogEmail."' AND p_pass ='".$LogPass."'";
+    $sql ="SELECT p_email, p_pass FROM pcars WHERE p_email ='".$LogEmail."' AND p_pass ='".$LogPass."'";
     $result = $conn->query($sql);
     $row = $result->num_rows;
     if($row == 1){

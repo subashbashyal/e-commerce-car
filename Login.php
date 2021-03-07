@@ -38,7 +38,7 @@
             	<a href="#">Forgot Password?</a>
 				
             	<button type="button" class="btn" onclick ="checklogin()">Login</button>
-				<small id =" statusLogMsg"></small>
+				<small id ="statusLogMsg"></small>
 			</form>
         </div>
     </div>
