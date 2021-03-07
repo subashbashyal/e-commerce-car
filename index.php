@@ -22,17 +22,14 @@
                         <form action="" class="myform text-center" id="Regform">
                             <header>Create new account</header>
                             <div class="form-group">
-                                <i class="fas fa-user"></i>
-                                <input class="myInput" type="text" placeholder="Username" id="username" >
-                                <small id="statusMsg1"></small>
+                            </div>
                             
-                            </div>
                             <div class="form-group">
-                                <i class="fas fa-envelope"></i>
+                               <i class="fas fa-envelope"></i>
                                 <input class="myInput" placeholder="Email"type="text"
-                                id="email" >
+                                id="email" ></div>
                                 <small id="statusMsg2"></small>
-                            </div>
+                            
                             <div class="form-group">
                                 <i class="fas fa-phone"></i>
                                 <input class="myInput" placeholder="phn.no"type="tel" id="phone">

@@ -43,12 +43,12 @@ function addPpl(){
    if(username.trim()==""){
        $("#statusMsg1").html('<small style="color:red;">enter name</small>');
        $("#username").focus();
-       return false;
+       return true;
    }
     else if(username.trim() != "" && !regusr.test(username)){
     $("#statusMsg1").html('<small style="color:red;">valid name</small>');
     $("#username").focus();
-    return false;
+    return true;
    
 }
    else if(email.trim()==""){
@@ -83,7 +83,7 @@ function addPpl(){
             password: password, 
         },
           success:function(data){
-            console.log(data);
+            //console.log(data);
              
             if(data == "ok"){
                 $('#successMsg').html("<span class='alert alert-success'>reg</span>");
@@ -105,13 +105,13 @@ function addPpl(){
 
 
 //empty all fields
-function clearRegFields(){
-$("#Regform").trim("reset");
-$("#statusMsg1 ").html("");
-$("#statusMsg2 ").html("");
-$("#statusMsg3 ").html("");
-$("#statusMsg4 ").html("");
-}
+//function clearRegFields(){
+//$("#Regform").trim("reset");
+//$("#statusMsg1 ").html("");
+//$("#statusMsg2 ").html("");
+//$("#statusMsg3 ").html("");
+//$("#statusMsg4 ").html("");
+//}
 
 //Ajax login verification
 function checklogin(){
